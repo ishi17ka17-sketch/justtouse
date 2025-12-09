@@ -1,0 +1,16 @@
+{
+  "name": "warmup-backoffice",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm:dev-server\" \"npm:dev-client\"",
+    "dev-server": "cd server && npm install && npm run dev",
+    "dev-client": "cd client && npm install && npm run dev",
+    "start": "concurrently \"npm:start-server\" \"npm:start-client\"",
+    "start-server": "cd server && npm run start",
+    "start-client": "cd client && npm run build && cd client && npm run preview"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
